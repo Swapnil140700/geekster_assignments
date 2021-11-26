@@ -1,0 +1,25 @@
+public class even_number_loop {
+    public static void main(String[] args) {
+        for (int i=2;i<=10;i++)
+        {
+            if (i%2==0)
+            {
+                System.out.println(i);
+            }
+        }
+    }
+}
+
+public class even_number_loop {
+    public static void main(String[] args) {
+        int num=2;
+        while (num<=10)
+        {
+            if (num%2==0)
+            {
+                System.out.println(num);
+            }
+            num++;
+        }
+    }
+}
