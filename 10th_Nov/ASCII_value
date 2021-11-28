@@ -1,0 +1,14 @@
+import java.util.Scanner;
+
+public class ASCII {
+    public static void main(String args[]) {
+        Scanner sc=new Scanner(System.in);
+
+        System.out.println("Enter the Character of which ASCII value is required");
+
+        char c=sc.next().charAt(0);
+        sc.close();
+        int a=c;
+        System.out.println(a);
+    }
+}
