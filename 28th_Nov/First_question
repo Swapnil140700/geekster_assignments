@@ -1,0 +1,45 @@
+import java.io.*;
+import java.util.*;
+
+public class first {
+    public static void main(String args[]){
+        Scanner sc = new Scanner(System.in);
+        int row = sc.nextInt();
+        int col = sc.nextInt();
+        int[][] matrix = new int[row][col];
+        for(int a = 0; a < row; a++)
+        {
+            for(int b = 0; b < col; b++)
+            {
+                matrix[a][b] = sc.nextInt();
+            }
+        }
+
+        int w = 0;
+        int x = matrix.length-1;
+        int y = 0;
+        int z = matrix[0].length-1;
+        while(w <= x && y <= z){
+            for (int i = w; i <= z; i++) {
+                System.out.print(matrix[w][i] + " ");
+            }
+            for (int i = w+1; i <= x; i++) {
+                System.out.print(matrix[i][z] + " ");
+            }
+            if(w+1 <= x){
+                for (int i = z-1; i >= y; i--) {
+                    System.out.print(matrix[x][i] + " ");
+                }
+            }
+            if(y+1 <= z){
+                for (int i = x-1; i > w; i--) {
+                    System.out.print(matrix[i][y] + " ");
+                }
+            }
+            w++;
+            x--;
+            y++;
+            z--;
+        }
+    }
+}
