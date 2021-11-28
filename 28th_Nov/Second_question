@@ -1,0 +1,36 @@
+import java.io.*;
+import java.util.*;
+class MyMatrix
+{
+    public static void main(String[] args)
+    {
+        Scanner sc = new Scanner(System.in);
+        int row = sc.nextInt();
+        int col = sc.nextInt();
+        int[][] matrix = new int[row][col];
+        for(int a = 0; a < row; a++)
+        {
+            for(int b = 0; b < col; b++)
+            {
+                matrix[a][b] = sc.nextInt();
+            }
+        }
+        int rows = matrix.length;
+        int cols = matrix[0].length;
+        int i = 0, j = 0, c = 0;
+        for (i = 0; i < cols && c < cols; ++i)
+        {
+            for (j = 0; j < rows; ++j)
+            {
+                System.out.print( matrix[j][c]+" ");
+            }
+            c++;
+
+            for (j = rows - 1; j >= 0 && c < cols; --j)
+            {
+                System.out.print(matrix[j][c] + " ");
+            }
+            c++;
+        }
+    }
+}
